@@ -18,7 +18,7 @@ const LandingPage = ({ flag }) => {
 
   setTimeout(() => {
     setBtnDisplay({ display: "inline-block" });
-  }, 100);
+  }, 16000);
 
   return (
     <div className="landing">

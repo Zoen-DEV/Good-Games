@@ -122,7 +122,7 @@ const Create = () => {
           throw new Error(err);
         });
       setBody(initialState);
-      window.location.replace("http://localhost:3000/");
+      window.location.replace("https://goodgames.vercel.app/");
     }
   };
 
