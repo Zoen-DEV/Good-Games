@@ -70,7 +70,7 @@ const Create = () => {
         break;
       case "genres":
         if (e.target.checked) {
-          console.log(e.target.value)
+          console.log(e.target.value);
           setBody({
             ...body,
             genresId: [...body.genresId, e.target.value],
@@ -117,12 +117,12 @@ const Create = () => {
         .post("https://good-games-back.herokuapp.com/videogames", body)
         .then((res) => {
           Swal.fire("El juego a sido creado correctamente");
+          setBody(initialState);
+          // window.location.replace("https://goodgames.vercel.app/");
         })
         .catch((err) => {
           throw new Error(err);
         });
-      setBody(initialState);
-      window.location.replace("https://goodgames.vercel.app/");
     }
   };
 
