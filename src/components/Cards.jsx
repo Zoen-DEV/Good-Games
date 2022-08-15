@@ -15,7 +15,7 @@ const Cards = ({ page }) => {
           const released = item.released.slice(0, 10);
           let gameGenres = [];
           if (item.genresId) {
-            const tempGenres = game.genresId.map((item) => Number(item));
+            const tempGenres = item.genresId.map((item) => Number(item));
             state.genres.forEach((item) => {
               if (tempGenres.includes(item.id)) {
                 gameGenres = [...item];
