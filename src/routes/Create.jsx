@@ -114,7 +114,7 @@ const Create = () => {
       Swal.fire("Select at least 1 genre");
     } else {
       axios
-        .post("http://localhost:3001/videogames", body)
+        .post("https://good-games-back.herokuapp.com/videogames", body)
         .then((res) => {
           Swal.fire("El juego a sido creado correctamente");
         })
