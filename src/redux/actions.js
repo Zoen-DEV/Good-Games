@@ -9,31 +9,31 @@ export const POST_GAME = "POST_GAME";
 export const GET_PLATAFORMS = "GET_PLATAFORMS";
 
 export const getGames = () => (dispatch) => {
-  return fetch(`http://localhost:3001/videogames/`)
+  return fetch(`https://good-games-back.herokuapp.com/videogames/`)
     .then((res) => res.json())
     .then((res) => dispatch({ type: GET_GAMES, payload: res }));
 };
 
 export const getSomeGames = (name) => (dispatch) => {
-  return fetch(`http://localhost:3001/videogames?name=${name}`)
+  return fetch(`https://good-games-back.herokuapp.com/videogames?name=${name}`)
     .then((res) => res.json())
     .then((res) => dispatch({ type: GET_SOME_GAMES, payload: res }));
 };
 
 export const getGenres = () => (dispatch) => {
-  return fetch("http://localhost:3001/genres/")
+  return fetch("https://good-games-back.herokuapp.com/genres/")
     .then((res) => res.json())
     .then((res) => dispatch({ type: GET_GENRES, payload: res }));
 };
 
 export const getDetail = (id) => (dispatch) => {
-  return fetch(`http://localhost:3001/videogame/${id}`)
+  return fetch(`https://good-games-back.herokuapp.com/videogame/${id}`)
     .then((res) => res.json())
     .then((res) => dispatch({ type: GET_DETAIL, payload: res }));
 };
 
 export const getPlataforms = () => (dispatch) => {
-  return fetch("http://localhost:3001/plataforms/")
+  return fetch("https://good-games-back.herokuapp.com/plataforms/")
     .then((res) => res.json())
     .then((res) => dispatch({ type: GET_PLATAFORMS, payload: res }));
 };
