@@ -13,10 +13,21 @@ const Cards = ({ page }) => {
       <div className="cards">
         {state.videogames[page]?.map((item) => {
           const released = item.released.slice(0, 10);
+          let gameGenres = [];
+          if (item.genresId) {
+            const tempGenres = game.genresId.map((item) => Number(item));
+            state.genres.forEach((item) => {
+              if (tempGenres.includes(item.id)) {
+                gameGenres = [...item];
+              }
+            });
+          } else {
+            gameGenres = [...item.genres];
+          }
           return (
             <Link to={`/game/${item.id}`} className="card" key={item.id}>
               <div className="genres">
-                {item.genres?.map((item, index) => {
+                {gameGenres?.map((item, index) => {
                   return <p key={index}>{item}</p>;
                 })}
               </div>
