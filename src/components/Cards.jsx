@@ -18,7 +18,7 @@ const Cards = ({ page }) => {
             const tempGenres = item.genresId.map((item) => Number(item));
             state.genres.forEach((item) => {
               if (tempGenres.includes(item.id)) {
-                gameGenres = [...item];
+                gameGenres = [...gameGenres, item];
               }
             });
           } else {
