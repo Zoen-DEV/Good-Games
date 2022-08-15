@@ -100,11 +100,11 @@ const Create = () => {
     } else if (body.rating === "") {
       Swal.fire("You must add a rating");
     } else if (
-      body.description.trim().length < 20 ||
-      body.description.trim().length > 300
+      body.description.trim().length < 50 ||
+      body.description.trim().length > 500
     ) {
       Swal.fire(
-        "Description must have at least 20 characters and a maximum of 300"
+        "Description must have at least 50 characters and a maximum of 500"
       );
     } else if (body.name.trim().length < 5 || body.name.trim().length > 50) {
       Swal.fire("Name must have at least 5 characters and a maximum of 50");
