@@ -15,14 +15,14 @@ const Cards = ({ page }) => {
           const released = item.released.slice(0, 10);
           let gameGenres = [];
           if (item.genresId) {
-            const tempGenres = item.genresId.map((item) => Number(item));
+            const toNum = item.genresId.map((item) => Number(item));
             state.genres.forEach((item) => {
-              if (tempGenres.includes(item.id)) {
-                gameGenres = [...gameGenres, item];
+              if (toNum.includes(Number(item.id))) {
+                gameGenres.push(item.name);
               }
             });
           } else {
-            gameGenres = [...item.genres];
+            gameGenres = item.genres;
           }
           return (
             <Link to={`/game/${item.id}`} className="card" key={item.id}>
