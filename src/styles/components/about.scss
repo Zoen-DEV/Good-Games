@@ -1,0 +1,52 @@
+.about{
+    @include flex(column, center, center);
+    width: 40vw;
+    margin: 100px auto;
+    h1{
+        color: $color-primary;
+    }
+    p{
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0.8px;
+    }
+    ul {
+        @include flex(row, space-between, center);
+        width: 20rem;
+        padding: 10px;
+        list-style: none;
+        .portfolio{
+            text-decoration: none;
+            color: $color-white;
+            letter-spacing: 1px;
+            transition: 0.6s;
+            animation: buttonUp ease 2s;
+        }
+        .portfolio:hover{
+            color: $color-primary;
+            transform: scale(1.2);
+        }
+        img {
+          width: 50px;
+          transition: 0.6s;
+          animation: buttonUp ease 2s;
+          @keyframes buttonUp {
+            0% {
+              position: relative;
+              opacity: 0;
+              top: 200px;
+            }
+            100% {
+              position: relative;
+              opacity: 1;
+              top: 0px;
+            }
+          }
+        }
+        img:hover {
+          transform: scale(1.2);
+          filter: drop-shadow(0 0 5px $color-primary);
+        }
+      }
+}

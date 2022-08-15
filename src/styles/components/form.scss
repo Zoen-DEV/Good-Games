@@ -1,0 +1,74 @@
+.create-form {
+  @include flex(column, center, flex-start);
+  width: 30vw;
+  margin: auto;
+  background-color: $color-bgs2;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  h1 {
+    color: $color-primary2;
+  }
+  span {
+    color: $color-primary;
+    letter-spacing: 1px;
+    .input-text {
+      width: 28vw;
+    }
+    input {
+      outline: none;
+      border: none;
+      box-shadow: 0 0 5px 2px $color-shadow;
+      padding: 5px;
+      border-radius: 5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: 18px;
+      background: $color-bgs;
+      color: $color-white;
+      border: 2px solid $color-grey4;
+      margin-bottom: 10px;
+    }
+    input:focus {
+      border-color: $color-primary2;
+    }
+  }
+  .checkbox-container {
+    @include flex(row, center, flex-start);
+    gap: 10px;
+    width: 30vw;
+    ul {
+      list-style: none;
+      li {
+        label {
+          cursor: pointer;
+          padding-left: 10px;
+          span {
+            color: $color-white;
+          }
+        }
+        label:hover {
+          span {
+            color: $color-primary2;
+          }
+        }
+      }
+    }
+  }
+  .submit {
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px $color-shadow;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 23px;
+    background: $color-bgs;
+    color: $color-primary;
+    align-self: flex-end;
+  }
+  .submit:hover{
+    background: $color-bgs2;
+    transform: scale(1.1);
+  }
+}

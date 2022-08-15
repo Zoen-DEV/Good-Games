@@ -1,0 +1,20 @@
+nav{
+    @include flex(row, space-around, center);
+    img{
+        width: 6rem;
+        filter: drop-shadow(1px 1px 5px $color-grey3);
+        transition: 0.3s;
+    }
+    img:hover{
+        filter: drop-shadow(1px 1px 6px $color-grey);
+        transform: scale(1.1);
+    }
+    .link{
+        text-decoration: none;
+        font-weight: 700;
+        color: $color-white;
+        letter-spacing: 0.15em;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+}

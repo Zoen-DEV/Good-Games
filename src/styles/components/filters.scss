@@ -1,0 +1,59 @@
+.filters {
+  width: 15vw;
+  padding: 20px;
+  position: absolute;
+  animation: toRight ease 3s;
+  button {
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px $color-grey4;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+  }
+  button:hover {
+    box-shadow: 0 0 6px 2px $color-grey3;
+  }
+  .order {
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 10px;
+  }
+  .genres {
+    padding-left: 10px;
+    span {
+      @include flex(row, flex-start, center);
+      gap: 5px;
+      transition: all 0.3s;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+    }
+    span:hover {
+      cursor: pointer;
+      img {
+        filter: opacity(0.5);
+      }
+      p {
+        letter-spacing: 1px;
+      }
+    }
+  }
+  @keyframes toRight {
+    0%{
+      position: relative;
+      opacity: 0;
+      left: -50px;
+    }
+    80%{
+      position: relative;
+      opacity: 1;
+      left: 0;
+    }
+  }
+}

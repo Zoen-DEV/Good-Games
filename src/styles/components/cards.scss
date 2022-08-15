@@ -1,0 +1,60 @@
+.cards {
+  @include flex(row, flex-start, baseline);
+  flex-wrap: wrap;
+  gap: 30px 5rem;
+  width: 85vw;
+  padding: 20px 0;
+  align-self: flex-end;
+  .card {
+    animation: fadeincards ease 3s;
+    text-decoration: none;
+    background-color: $color-bg2;
+    color: $color-white;
+    width: 20rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px $color-grey3;
+    transition: 0.4s;
+    cursor: pointer;
+    img {
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+      height: 12rem;
+      object-fit: cover;
+    }
+    .genres {
+      background: linear-gradient(to right, #232323ad, transparent);
+      position: absolute;
+      width: 10rem;
+      height: 12rem;
+      padding-left: 3px;
+    }
+    .info {
+      @include flex(column, normal, normal);
+      padding: 0 10px;
+      h3 {
+        position: absolute;
+        letter-spacing: 0.1em;
+        max-width: 15rem;
+      }
+      .rating {
+        color: $color-primary;
+        align-self: flex-end;
+      }
+      .released {
+        color: $color-grey;
+      }
+    }
+  }
+  .card:hover {
+    box-shadow: 0 0 10px 2px $color-grey2;
+    transform: scale(1.05);
+  }
+  @keyframes fadeincards {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

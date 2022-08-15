@@ -1,0 +1,19 @@
+@import "./var.scss", "./components/nav.scss", "./components/searchBar.scss",
+  "./components/cards.scss", "./components/filters.scss",
+  "./components/home.scss", "./components/landing.scss",
+  "./components/details.scss", "./components/loader.scss",
+  "./components/form.scss", "./components/about.scss";
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-black;
+  .App {
+    background: $color-black;
+    height: 100%;
+    padding-bottom: 50px;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,22 @@
+$color-black: #151515;
+$color-bg: #232323;
+$color-bg2: #303030;
+$color-bgs: #23232390;
+$color-bgs2: #30303090;
+$color-white: #f5f5f5;
+$color-grey: #838383;
+$color-grey2: #656565;
+$color-grey3: #454545;
+$color-grey4: #353535;
+$color-grey5: #3b3b3b;
+$color-primary: #ffc729;
+$color-primary2: #fff759;
+$color-shadow: #3030308c;
+
+
+@mixin flex($d, $j, $a){
+    display: flex;
+    flex-direction: $d;
+    justify-content: $j;
+    align-items: $a;
+}
