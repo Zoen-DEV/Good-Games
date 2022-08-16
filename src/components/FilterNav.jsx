@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector, filterOnly } from "react-redux";
 import { filter, order, reset } from "../redux/actions";
 
 const FilterNav = () => {
