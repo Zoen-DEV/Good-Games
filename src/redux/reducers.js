@@ -7,6 +7,7 @@ import {
   FILTER,
   GET_DETAIL,
   GET_PLATAFORMS,
+  FILTER_ONLY,
 } from "./actions";
 
 const initialState = {
@@ -168,6 +169,23 @@ const rootReducer = (state = initialState, actions) => {
       return {
         ...state,
         plataforms: actions.payload,
+      };
+    case FILTER_ONLY:
+      let filteredGames;
+      if (actions.payload === "db") {
+        filteredGames = state.allgames.filter(
+          (item) => typeof item.id === "string"
+        );
+      } else if (actions.payload === "api") {
+        filteredGames = state.allgames.filter(
+          (item) => typeof item.id === "number"
+        );
+      } else {
+        filteredGames = state.allgames;
+      }
+      return {
+        ...state,
+        videogames: pagination(filteredGames),
       };
     default:
       return state;

@@ -7,6 +7,7 @@ export const RESET = "RESET";
 export const FILTER = "FILTER";
 export const POST_GAME = "POST_GAME";
 export const GET_PLATAFORMS = "GET_PLATAFORMS";
+export const FILTER_ONLY = "FILTER_ONLY";
 
 export const getGames = () => (dispatch) => {
   return fetch(`https://good-games-back.herokuapp.com/videogames/`)
@@ -49,3 +50,7 @@ export const filter = (type) => (dispatch) => {
 export const reset = () => (dispatch) => {
   return dispatch({ type: RESET });
 };
+
+export const filterOnly = (type) => (dispatch) => {
+  return dispatch({ type: FILTER_ONLY, payload: type})
+}
